@@ -3282,7 +3282,7 @@ admin%20
 admin%20/
 admin%20/page
 admin%24
-admin%ext%
+admin
 admin-ANTIGO
 admin-admin
 admin-ajax
