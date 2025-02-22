@@ -6,8 +6,9 @@ import asyncio
 import argparse
 from bleak import BleakScanner, BleakClient
 
+timeout = 10 # adjust timeout as needed
+
 async def list_characteristics_and_write(device_address, write_enabled):
-    timeout = 15 #  adjust timeout as needed
     async with BleakClient(device_address, timeout=timeout) as client:
         services = client.services
 
@@ -48,7 +49,7 @@ async def list_characteristics_and_write(device_address, write_enabled):
                 print("Invalid choice.")
 
 async def discover_devices():
-    devices = await BleakScanner.discover()
+    devices = await BleakScanner.discover(timeout=timeout)
     
     if not devices:
         print("No devices found.")
