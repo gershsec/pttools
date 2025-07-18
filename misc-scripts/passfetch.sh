@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Keychain password fetch by jk4ln
+# Keychain password fetch by gershsec
 # v1.0
 
 # argument check 
